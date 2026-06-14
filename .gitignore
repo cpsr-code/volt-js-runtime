@@ -1,0 +1,29 @@
+# Build outputs and executables
+*.exe
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# Temporary files created by Volt compiler
+.temp_output.cpp
+.temp_exec.exe
+.temp_exec*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build directories (if added later)
+build/
+bin/
+obj/
