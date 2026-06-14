@@ -27,7 +27,7 @@ Run the build script to compile the standard library and generate the `volt` bin
 You can execute JavaScript by passing your `.js` file to the compiled runtime:
 
 ```bash
-./volt my_script.js
+./volt index.js
 ```
 
 ---
