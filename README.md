@@ -8,7 +8,7 @@ To run Volt, you need a C++17 compatible compiler (`g++`) installed on your syst
 
 **1. Clone the repository**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/cpsr-code/volt-js-runtime.git
 cd volt-js-runtime
 ```
 
