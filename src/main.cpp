@@ -47,7 +47,13 @@ int main(int argc, char* argv[]) {
     }
 
     std::string tempCppFile = ".temp_output.cpp";
-    std::string tempExecFile = ".temp_exec.exe"; 
+#ifdef _WIN32
+    std::string tempExecFile = ".temp_exec.exe";
+    std::string execPrefix = "";
+#else
+    std::string tempExecFile = ".temp_exec";
+    std::string execPrefix = "./";
+#endif
 
     try {
         Lexer lexer(sourceCode);
@@ -63,7 +69,7 @@ int main(int argc, char* argv[]) {
 
         // Compile against the static library and execute without wrapper text
         std::string compileAndRunCmd = "g++ -std=c++17 -O3 " + tempCppFile + 
-            " -I src/lib -L. -lvoltjs -o " + tempExecFile + " && " + tempExecFile;
+            " -I src/lib -L. -lvoltjs -o " + tempExecFile + " && " + execPrefix + tempExecFile;
 
         int result = std::system(compileAndRunCmd.c_str());
 
